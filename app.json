@@ -24,10 +24,11 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "ca.package"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/iconeMonnaie.png"
     }
   }
 }
