@@ -7,19 +7,19 @@ const ASPECT_RATIO = width / height;
 const LATITUDE_DELTA = 60;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
-const ileDeMontreal = {
-  latitude: 56.0000,
+const northAmerica = {
+  latitude: 48.0000,
   longitude: -96.0000,
   latitudeDelta: LATITUDE_DELTA,
   longitudeDelta: LONGITUDE_DELTA
 }
 
-const Maps = ({ navigation }) => {
+const Maps = ({  }) => {
   return (
     <View style={styles.container}>
       <MapView 
         style={styles.mapStyle} 
-        region={ileDeMontreal}
+        region={northAmerica}
         rotateEnabled={false}
         zoomControlEnabled={true}
         zoomEnabled={true}
@@ -30,11 +30,13 @@ const Maps = ({ navigation }) => {
 
 const styles = ({
   container:{
-
+    flex: 1, 
+    alignItems: 'center', 
+    justifyContent: 'center'
   },
   mapStyle: {
     width: Dimensions.get('window').width,
-    height: Dimensions.get('window').height -100,
+    height: Dimensions.get('window').height - 100,
   }
 });
 

@@ -3,17 +3,15 @@ import { View, Text, StyleSheet, Pressable} from 'react-native';
 import styles from "../stylesheet/styles";
 import { AntDesign } from '@expo/vector-icons'; 
 
-
 const Cash = ({ navigation }) => {
     return (
       <View style={styles.container}>
           <Pressable><AntDesign name="pluscircleo" size={30} color="black" /></Pressable>
-          <Text style={{color: "#000000",fontSize: 60,marginBottom: 50}}>La liste des pays</Text>
+          <Text style={{color: "#000000",fontSize: 40,marginBottom: 50}}>Liste des pays</Text>
       </View>
     );
 
 }
-
 
 const stylesheet = StyleSheet.create({
   centeredView: {

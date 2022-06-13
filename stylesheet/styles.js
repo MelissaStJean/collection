@@ -4,13 +4,12 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: "#B6FFB6",
+    backgroundColor: "#BFFEB8",
   },
 
   title: {
     fontSize: 60,
-    justifyContent: 'center',
+    textAlign: 'center',
     color: "#000000",
     marginBottom: 50,
   },
@@ -33,16 +32,15 @@ export default StyleSheet.create({
     height: Dimensions.get('window').height,
   },
   textInfo:{
-    marginLeft: 30, 
-    marginRight: 20,
-    marginTop: 20,
-    fontSize: 20,
+    margin: 25,
+    fontSize: 23,
     padding: 10,
-    textAlign:"center"
+    textAlign: "justify"
   },
 
   img:{
-    height: 100, 
-    width: 100
+    height: 200, 
+    width: 200,
+    marginLeft: 100
   }
 })
