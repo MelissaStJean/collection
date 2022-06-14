@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Dimensions} from 'react-native';
-import MapView from 'react-native-maps';
+import MapView,{ Polygon }  from 'react-native-maps';
+import * as Canada from '../countries/CAN.geo.json';
 
 let { width, height } = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
@@ -23,10 +24,22 @@ const Maps = ({  }) => {
         rotateEnabled={false}
         zoomControlEnabled={true}
         zoomEnabled={true}
-    ></MapView>
+      >
+      <Polygon 
+        coordinates={polygonCords}
+        fillColor='#59FFC8'></Polygon>
+      </MapView> 
     </View>
   );
 }
+
+const polygonCords = Canada.features[0].geometry.coordinates[0].map(polygon =>{
+  let coords = {
+    latitude: parseFloat(polygon[1]),
+    longitude: parseFloat(polygon[0])
+  }
+  return coords;
+});
 
 const styles = ({
   container:{

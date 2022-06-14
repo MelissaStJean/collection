@@ -1,37 +1,31 @@
 import React from 'react';
-import { View, Text, StyleSheet, Pressable} from 'react-native';
+import { View, Text, StyleSheet, Pressable,Button} from 'react-native';
 import styles from "../stylesheet/styles";
 import { AntDesign } from '@expo/vector-icons'; 
 
+//const setVisible = false;
 const Cash = ({ navigation }) => {
     return (
       <View style={styles.container}>
-          <Pressable><AntDesign name="pluscircleo" size={30} color="black" /></Pressable>
+          <Pressable onPress={DisplayForm}><AntDesign name="pluscircleo" size={30} color="black" /></Pressable>
           <Text style={{color: "#000000",fontSize: 40,marginBottom: 50}}>Liste des pays</Text>
       </View>
     );
 
 }
+/*if(setVisible == true)
+{
+  displayForm();
+}*/
+function DisplayForm(){
+  return (
+    <div>
+      <h1>Ajouter un billet</h1>
+    </div>
+  )
+}
 
 const stylesheet = StyleSheet.create({
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2
-    }
-  },
   button: {
     borderRadius: 20,
     padding: 10,
@@ -43,12 +37,8 @@ const stylesheet = StyleSheet.create({
   buttonClose: {
     backgroundColor: "#2196F3",
   },  
-  modalText: {
-    marginBottom: 20,
-    textAlign: "center",
-  }
-  
 }
 );
 
 export {Cash};
+export default DisplayForm;

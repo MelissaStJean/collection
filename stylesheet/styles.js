@@ -15,11 +15,12 @@ export default StyleSheet.create({
   },
 
   button: {
-    alignItems: 'center',
+    margin: 50,
+    marginTop: 10,
+    marginBottom: 10,
+    padding: 15,
     justifyContent: 'center',
-    height: 80,
-    width: 500, 
-    backgroundColor: "#BAADFF",
+    backgroundColor: "#59FF9B",
   },
 
   mapContainer:{
@@ -33,7 +34,7 @@ export default StyleSheet.create({
   },
   textInfo:{
     margin: 25,
-    fontSize: 23,
+    fontSize: 21,
     padding: 10,
     textAlign: "justify"
   },
@@ -41,6 +42,6 @@ export default StyleSheet.create({
   img:{
     height: 200, 
     width: 200,
-    marginLeft: 100
+    marginLeft: 90
   }
 })

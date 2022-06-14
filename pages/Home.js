@@ -1,6 +1,7 @@
 import React from 'react';
-import { Text, Image,SafeAreaView,ScrollView} from 'react-native';
+import { Text, Image,SafeAreaView,ScrollView,Pressable} from 'react-native';
 import styles from "../stylesheet/styles";
+import { Ionicons } from '@expo/vector-icons'; 
 
 const Home = ({ navigation }) => {
     return (
@@ -9,10 +10,11 @@ const Home = ({ navigation }) => {
           <Text style={styles.title}>Bienvenue</Text>
           <Image style={styles.img} source={require('../assets/iconeMonnaie.png')} />
           <Text style={styles.textInfo}>
-            Cette application s'adresse à mon père, fervant collectionneur de billet & pièce de monnaie.
-            Pour partager à des membres de la famille ou autre il suffit de ...
-            Préparez-vous à voir plus de X de partout dans le monde.
+            L'application s'adresse à mon père, fervant collectionneur de billets & pièces de monnaie. Préparez-vous à voir plus de 1500 billets de partout dans le monde !
           </Text>
+          <Pressable style={styles.button}>
+            <Ionicons name="share-social" size={24} color="black" style={{marginLeft:60}}><Text> Partager</Text></Ionicons>
+          </Pressable>
         </ScrollView>
       </SafeAreaView>
     );
