@@ -1,7 +1,6 @@
 import React from 'react';
 import { View, Dimensions} from 'react-native';
 import MapView,{ Polygon }  from 'react-native-maps';
-import App from '../App';
 import * as Canada from '../countries/CAN.geo.json';
 
 let { width, height } = Dimensions.get('window');
@@ -27,27 +26,36 @@ const Maps = ({  }) => {
         zoomEnabled={true}
       >
         {
-          Canada.features[0].geometry.coordinates.map((key,index) =>{
-            return(
-              <Polygon key={"polygon" + index} coordinates={polygonCords(index)} fillColor='#59FFC8'></Polygon>
-            );
-          })
+          test()
         }
       </MapView> 
     </View>
   );
 }
 
+const test = () => {
+  return Canada.features[0].geometry.coordinates.map((key,index) =>{
+    return(
+      <Polygon key={"polygon" + index} coordinates={polygonCords(index)} fillColor='#59FFC8'></Polygon>
+
+    );
+  })
+}
+
+//latitude/longitude si erreur => parseFloat()
 function polygonCords (index) {
     Canada.features[0].geometry.coordinates[index][0].map(polygons =>{
       let coord = {
-        latitude :parseFloat(polygons[1]),
-        longitude : parseFloat(polygons[0])
+        latitude : polygons[1],
+        longitude :  polygons[0]
       }
     return coord;
     
   });
 }
+
+
+
 const styles = ({
   container:{
     flex: 1, 
