@@ -8,23 +8,12 @@ import { Maps } from './pages/Maps.js';
 import { Cash } from './pages/Cash.js';
 //#endregion
 
-const DATABASE_URL = "postgresql://melissa:3o6Sd7iZQZl-T0NsucqxUQ@free-tier11.gcp-us-east1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dearly-doe-1298";
+/*const DATABASE_URL = "postgresql://melissa:vzzRCrRXhQAfV6vTv6p8TQ@free-tier11.gcp-us-east1.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full&options=--cluster%3Dsteady-ghost-1645";
 const { Client } = require('pg');
-const client = new Client(DATABASE_URL);
+const client = new Client(DATABASE_URL);*/
 const Tab = createBottomTabNavigator();
-export default function App() {
-  (async () => {
-    await client.connect();
-    try {
-      
-    } catch (err) {
-      console.error("Erreur", err);
-    } finally {
-      console.log("Réussi")
-      client.end();
-    }
-  })();
 
+export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator initialRouteName='Home'  
